@@ -20,19 +20,20 @@
     var end = data.command.indexOf(']');
     var boxSpaceRemaining = Number(data.command.substring(begin, end));
     var p = document.createElement('p');
-    p.innerText = boxSpaceTaken;
+    p.innerText = boxSpaceRemaining - 3;
     p.style.textAlign = 'center';
     // Our test box is 15cm and we want a 3cm buffer (max height of 12cm),
     // so if space remaining is greater than 3, we're good.
     if (boxSpaceRemaining > 3) {
-      selectedBoxCapacity.innerText = boxSpaceTaken;
+      selectedBoxCapacity.innerText = boxSpaceRemaining - 3;
       selectedBox.style.backgroundColor = '#0F0';
     } else if (boxSpaceRemaining === 3) { // It fits, but barely...
-      selectedBoxCapacity.innerText = boxSpaceTaken;
+      selectedBoxCapacity.innerText = boxSpaceRemaining - 3;
       selectedBox.style.backgroundColor = '#FF0';
     } else { // Sorry, box won't fit with the buffer we want
       selectedBox.style.backgroundColor = '#F00';
       alert('Box is too large for this location!');
+      selectedBoxCapacity.innerText = boxCapacity;
     }
   }
 })();
