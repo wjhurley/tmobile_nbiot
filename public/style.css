@@ -27,20 +27,21 @@ section {
 }
 
 [id^="box-"] {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 170px;
   background-color: magenta;
   border: 1px solid black;
 }
 
 [id^="box-"] h4,
 [id^="boxCapacity-"] {
+  font-weight: bold;
   margin-top: 5px;
   text-align: center;
 }
 
 [id^="boxCapacity-"] {
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 .m2m-commands {
@@ -209,6 +210,7 @@ div#top-to-bottom > div {
 
 .centerdiv {
   margin: auto;
+  padding-left: 25px;
   width: 600px;
 }
 
